@@ -1,0 +1,6 @@
+c:\users\anton\documents\visual studio 2013\Projects\RssTry\RssTry\bin\Debug\RssTry.exe.config
+c:\users\anton\documents\visual studio 2013\Projects\RssTry\RssTry\obj\Debug\RssTry.csprojResolveAssemblyReference.cache
+c:\users\anton\documents\visual studio 2013\Projects\RssTry\RssTry\bin\Debug\RssTry.exe
+c:\users\anton\documents\visual studio 2013\Projects\RssTry\RssTry\bin\Debug\RssTry.pdb
+c:\users\anton\documents\visual studio 2013\Projects\RssTry\RssTry\obj\Debug\RssTry.exe
+c:\users\anton\documents\visual studio 2013\Projects\RssTry\RssTry\obj\Debug\RssTry.pdb
