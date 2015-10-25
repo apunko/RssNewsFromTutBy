@@ -25,13 +25,16 @@ namespace RssTry
 
         static public void DisplayNewsItems(SyndicationFeed feed)
         {
-            foreach (SyndicationItem item in feed.Items)
+            foreach (SyndicationItem item in feed.Items.Reverse())
             {
                 string title = item.Title.Text;
                 DateTime date = item.PublishDate.DateTime;
-                if (date.AddHours(HoursToAdd) > StartTime)
+                DateTime dateWithAddHours = date.AddHours(HoursToAdd);
+                if (dateWithAddHours > StartTime)
                 {
-                    Console.WriteLine("{0}, {1}", title, date.ToString());
+                    Console.WriteLine();
+                    Console.WriteLine(date.ToString());
+                    Console.WriteLine(title);
                 }
             }
             HoursToAdd = 0;
@@ -56,9 +59,18 @@ namespace RssTry
         }
         static void Main(string[] args)
         {
-            TimerCallback tcb = GetRssFromTutBy;
-            Timer stateTimer = new Timer(tcb, null, 0, 6000);
-            Console.ReadLine();
+            try
+            {
+                Console.WriteLine("News of the last 24 hours from TUT.by\n");
+                TimerCallback tcb = GetRssFromTutBy;
+                Timer stateTimer = new Timer(tcb, null, 0, 60000);
+                Console.ReadLine();
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine(error.Message);
+                Console.ReadLine();
+            }
         }
     }
 }
